@@ -1,0 +1,20 @@
+
+.header {
+	// position: fixed;
+	// z-index: 10000;
+	height: 88px;
+	width: 100%;
+	background: lightcoral;
+
+	display: flex;
+	align-items: center;
+
+	@media screen and (max-width: $max-tablet-width) {
+		background: none;
+	}
+
+	&__container {
+		width: 100%;
+	}
+
+}

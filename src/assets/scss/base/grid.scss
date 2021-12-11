@@ -1,0 +1,27 @@
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 12vw;
+	padding-left: 12vw;
+
+	@media screen and (max-width: 1590px) {
+		padding-right: 9vw;
+		padding-left: 9vw;
+	}
+
+	@media screen and (max-width: $max-tablet-width) {
+		padding-right: 60px;
+		padding-left: 60px;
+	}
+
+	@media screen and (max-width: $max-landscape-width) {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+
+	@media screen and (max-width: $max-mobile-width) {
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+
+}

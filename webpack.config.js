@@ -1,0 +1,146 @@
+const path = require('path')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+// const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const isProd = process.env.NODE_ENV === 'production'
+const isDev = !isProd
+
+const filename = ext => isDev ? `[name].bundle.${ext}` : `./${ext}/[name].[hash].bundle.${ext}`
+
+const jsLoaders = () => {
+  const loaders = [
+    {
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env'],
+        plugins: ['@babel/plugin-proposal-class-properties']
+      }
+    }
+  ]
+
+  if (isDev) {
+    loaders.push('eslint-loader')
+  }
+
+  return loaders
+}
+
+
+module.exports = {
+
+  context: path.resolve(__dirname, 'src'),
+  mode: 'development',
+  // entry: ['@babel/polyfill', './index.js'],
+  entry: {
+    'healthy-fit-happy': ['@babel/polyfill', './assets/js/healthy-fit-happy.js'],
+    'policy': ['@babel/polyfill', './assets/js/policy.js']
+  },
+
+  output: {
+    filename: 'assets/js/[name].[hash].bundle.js',
+    path: path.resolve(__dirname, 'dist/')
+  },
+
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  },
+  devtool: isDev ? 'source-map' : false,
+  devServer: {
+    port: 3000,
+	  hot: isDev,
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    
+    new HTMLWebpackPlugin({
+      filename: 'healthy-fit-happy/index.html',
+      template: 'healthy-fit-happy/index.html',
+      minify: {
+        removeComments: isProd,
+        collapseWhitespace: isProd
+      },
+     // chunks: ['main']
+     chunks: ['healthy-fit-happy']
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'healthy-fit-happy/policy.html',
+      template: 'healthy-fit-happy/policy.html',
+      minify: {
+        removeComments: isProd,
+        collapseWhitespace: isProd
+      },
+      chunks: ['policy']
+    }),
+
+    new CopyPlugin([
+      {
+        from: path.resolve(__dirname, 'src/assets/images'),
+        to: path.resolve(__dirname, 'dist/assets/images')
+      },
+      {
+        from: path.resolve(__dirname, 'src//assets/api'),
+        to: path.resolve(__dirname, 'dist/assets/api')
+      }
+    ]),
+    new MiniCssExtractPlugin({
+      filename: 'assets/' + filename('css'),
+      // filename: './assets/css/[name].[hash].bundle.css',
+    })
+  ],
+
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: isDev,
+              reloadAll: true
+            }
+          },
+          'css-loader',
+          'sass-loader'
+        ],
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: jsLoaders()
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+              context: path.resolve(__dirname, "src/"),
+              outputPath: '/',
+              publicPath: '../../',
+              useRelativePath: true,
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
+      }
+    ]
+  }
+
+}

@@ -1,0 +1,80 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	position: relative;
+	font-family: "Poppins";
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	min-height: 100vh;
+}
+
+main {
+	width: 100%;
+	overflow: hidden;
+	flex-grow: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 105%;
+
+
+  @media screen and (max-width: $max-tablet-width) {
+    max-width: 500px;
+    font-size: 22px;
+	line-height: 110%;
+  }
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 105%;
+  
+  
+	@media screen and (max-width: $max-tablet-width) {
+	  max-width: 500px;
+	  font-size: 22px;
+	  line-height: 110%;
+	}
+}
+
+p {
+	font-size: 24px;
+	font-weight: 300;
+	color: $mainText;
+}
+
+a {
+	color: $white;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
