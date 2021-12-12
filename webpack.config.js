@@ -35,7 +35,7 @@ module.exports = {
   // entry: ['@babel/polyfill', './index.js'],
   entry: {
     'healthy-fit-happy': ['@babel/polyfill', './assets/js/healthy-fit-happy.js'],
-    'policy': ['@babel/polyfill', './assets/js/policy.js']
+    'privacy-policy': ['@babel/polyfill', './assets/js/privacy-policy.js']
   },
 
   output: {
@@ -67,13 +67,13 @@ module.exports = {
      chunks: ['healthy-fit-happy']
     }),
     new HTMLWebpackPlugin({
-      filename: 'healthy-fit-happy/policy.html',
-      template: 'healthy-fit-happy/policy.html',
+      filename: 'healthy-fit-happy/privacy-policy.html',
+      template: 'healthy-fit-happy/privacy-policy.html',
       minify: {
         removeComments: isProd,
         collapseWhitespace: isProd
       },
-      chunks: ['policy']
+      chunks: ['privacy-policy']
     }),
 
     new CopyPlugin([

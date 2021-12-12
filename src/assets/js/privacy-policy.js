@@ -1,4 +1,4 @@
-import '../scss/policy.scss'
+import '../scss/privacy-policy.scss'
 
 import './modules/vanilla-lazyload';
 // import './modules/sourcebuster';
