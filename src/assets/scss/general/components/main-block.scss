@@ -3,8 +3,45 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 70%, 50%;
-    background: lightgray;
-    padding-top: 25px;
+    // background: lightgray;
+    padding-top: 50px;
 	padding-bottom: 25px;
+
+    &__title {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    &__description {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    &__img {
+        max-width: 300px;
+
+        &-wrap {
+            text-align: center;
+            padding: 20px 0;
+        }
+    }
+
+    &__buy {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+
+        &-button {
+            padding: 10px 20px;
+            color: $white;
+            background: rgba(255, 166, 0, 0.986);
+            display: inline-block;
+
+            &:hover {
+                background: rgba(223, 145, 1, 0.986);
+            }
+        }
+
+    }
 
 }    
