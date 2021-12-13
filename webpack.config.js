@@ -57,8 +57,8 @@ module.exports = {
     new CleanWebpackPlugin(),
     
     new HTMLWebpackPlugin({
-      filename: 'healthy-fit-happy/index.html',
-      template: 'healthy-fit-happy/index.html',
+      filename: 'index.html',
+      template: 'index.html',
       minify: {
         removeComments: isProd,
         collapseWhitespace: isProd
@@ -67,8 +67,8 @@ module.exports = {
      chunks: ['healthy-fit-happy']
     }),
     new HTMLWebpackPlugin({
-      filename: 'healthy-fit-happy/privacy-policy.html',
-      template: 'healthy-fit-happy/privacy-policy.html',
+      filename: 'privacy-policy.html',
+      template: 'privacy-policy.html',
       minify: {
         removeComments: isProd,
         collapseWhitespace: isProd
