@@ -32,13 +32,27 @@
         text-align: center;
 
         &-button {
-            padding: 10px 20px;
+            padding: 15px 30px;
             color: $white;
-            background: rgba(255, 166, 0, 0.986);
+            border-radius: 4px;
+            background: #3db36b;
             display: inline-block;
+            font-size: 22px;
+            line-height: 140%;
+            font-weight: 500;
+            color: $white;
+
+            @media screen and (max-width: $max-tablet-width) {
+                font-size: 18px;
+            }
+        
+            @media screen and (max-width: $max-mobile-width) {
+                font-size: 18px;
+                max-width: 100%;
+            }
 
             &:hover {
-                background: rgba(223, 145, 1, 0.986);
+                background: #38a563;
             }
         }
 

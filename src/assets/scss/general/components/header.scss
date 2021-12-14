@@ -11,9 +11,9 @@
 	display: flex;
 	align-items: center;
 
-	@media screen and (max-width: $max-tablet-width) {
-		background: none;
-	}
+	// @media screen and (max-width: $max-tablet-width) {
+	// 	background: none;
+	// }
 
 	&__container {
 		width: 100%;
