@@ -35,7 +35,10 @@ module.exports = {
   // entry: ['@babel/polyfill', './index.js'],
   entry: {
     'healthy-fit-happy': ['@babel/polyfill', './assets/js/healthy-fit-happy.js'],
-    'privacy-policy': ['@babel/polyfill', './assets/js/privacy-policy.js']
+    'privacy-policy': ['@babel/polyfill', './assets/js/privacy-policy.js'],
+    'article01': ['@babel/polyfill', './assets/js/article01.js'],
+    'article02': ['@babel/polyfill', './assets/js/article02.js'],
+    'article03': ['@babel/polyfill', './assets/js/article03.js']
   },
 
   output: {
@@ -75,6 +78,34 @@ module.exports = {
       },
       chunks: ['privacy-policy']
     }),
+    new HTMLWebpackPlugin({
+      filename: 'article01.html',
+      template: 'article01.html',
+      minify: {
+        removeComments: isProd,
+        collapseWhitespace: isProd
+      },
+      chunks: ['article01']
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'article02.html',
+      template: 'article02.html',
+      minify: {
+        removeComments: isProd,
+        collapseWhitespace: isProd
+      },
+      chunks: ['article02']
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'article03.html',
+      template: 'article03.html',
+      minify: {
+        removeComments: isProd,
+        collapseWhitespace: isProd
+      },
+      chunks: ['article03']
+    }),
+
 
     new CopyPlugin([
       {
