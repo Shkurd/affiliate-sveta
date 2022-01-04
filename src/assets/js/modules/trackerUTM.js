@@ -5,7 +5,7 @@
 document.addEventListener('DOMContentLoaded', trackerUTM());
 
 export function trackerUTM() {
-    console.log('trackerUTM: ', data)
+
     let params = new URLSearchParams(document.location.search);
     let UTMCampaign = params.get('utm_campaign');
     let allLinksList = document.querySelectorAll('a[data-link="true"]');
