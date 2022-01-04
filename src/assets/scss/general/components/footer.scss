@@ -3,4 +3,57 @@
 	color: #fff;
 	padding-top: 25px;
 	padding-bottom: 25px;
+
+	&__info {
+
+		&-wrap {
+			padding-top: 15px;
+			padding-bottom: 15px;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 55px 50px;
+
+			@media screen and (max-width: $max-tablet-width) {
+				padding-bottom: 25px;
+				grid-template-columns: 1fr;
+				gap: 20px 5px;
+			}
+		}
+
+		&-policy {
+			text-align: left;
+
+			@media screen and (max-width: $max-tablet-width) {
+				text-align: center;
+			}
+		}
+
+		&-text {
+			text-align: center;
+		}
+
+		&-copyright {
+			text-align: right;
+
+			@media screen and (max-width: $max-tablet-width) {
+				text-align: center;
+			}
+		}
+
+		&-warning {
+			border: solid 1px $white;
+			border-radius: 5px;
+			text-align: center;
+			padding: 15px 25px;
+			display: flex;
+			flex-direction: column;
+
+			&-wrap {
+				max-width: 1200px;
+				padding: 15px 25px;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
 }

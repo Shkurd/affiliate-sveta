@@ -38,7 +38,9 @@ module.exports = {
     'privacy-policy': ['@babel/polyfill', './assets/js/privacy-policy.js'],
     'article01': ['@babel/polyfill', './assets/js/article01.js'],
     'article02': ['@babel/polyfill', './assets/js/article02.js'],
-    'article03': ['@babel/polyfill', './assets/js/article03.js']
+    'article03': ['@babel/polyfill', './assets/js/article03.js'],
+    'coffee-tweak1': ['@babel/polyfill', './assets/js/coffee-tweak1.js']
+    
   },
 
   output: {
@@ -104,6 +106,15 @@ module.exports = {
         collapseWhitespace: isProd
       },
       chunks: ['article03']
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'coffee-tweak1.html',
+      template: 'coffee-tweak1.html',
+      minify: {
+        removeComments: isProd,
+        collapseWhitespace: isProd
+      },
+      chunks: ['coffee-tweak1']
     }),
 
 
