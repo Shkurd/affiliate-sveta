@@ -1,8 +1,20 @@
+Options +FollowSymLinks 
+RewriteEngine On 
+RewriteCond %{HTTP_HOST} ^www.healthy-fit-happy\.com$ [NC] 
+RewriteRule ^(.*)$ https://healthy-fit-happy.com/$1 [R=301,L]
+
+RewriteEngine On
+RewriteCond %{HTTPS} =off 
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 RewriteEngine on
 RewriteBase /
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
-RewriteRule ^([^.]+)\.html$ healthy-fit-happy.com/$1 [R=301,L]
+RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
 RewriteCond %{REQUEST_URI} !(\.[^./]+)$
 RewriteCond %{REQUEST_fileNAME} !-d
 RewriteCond %{REQUEST_fileNAME} !-f
 RewriteRule (.*) /$1.html
+
+ErrorDocument 404 https://healthy-fit-happy.com/404.html
