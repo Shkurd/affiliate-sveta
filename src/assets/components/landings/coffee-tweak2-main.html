@@ -1,0 +1,112 @@
+
+<section class="coffee-tweak2-main">
+    <div class="container coffee-tweak2-main__container">
+
+        <div class="coffee-tweak2-main__info-wrap">
+            <h1 class="coffee-tweak2-main__title coffee-tweak2-main__title-mobile">
+                Most Americans Have No Idea That This Simple "10-second Routine" Exists... And Can Change Lives
+            </h1>
+            <div class="coffee-tweak2-main__info-img">
+                <img class="lazy" data-src="./assets/images/landings/35413728.jpg" alt="img">
+            </div>
+            <div class="coffee-tweak2-main__info">
+                <h1 class="coffee-tweak2-main__title coffee-tweak2-main__title-pc">
+                    Most Americans Have No Idea That This Simple "10-second Routine" Exists... And Can Change Lives
+                </h1>
+                <p class="coffee-tweak2-main__info-text">
+                    This simple 10-second morning coffee routine. I used to feel like a burden to my family.. But now, not only have I kept my blood sugar in check.. I also feel full of energy and can eat whatever I want, including cakes and pizza! - Ellen from Massachusetts (63 yrs old)
+                </p>
+                <p class="coffee-tweak2-main__info-text">
+                    I can't say it'll work the same for you, but you can take this short quiz and find out more about this method!
+                </p>
+            </div>
+        </div>
+        <div class="coffee-tweak2-main__survey-wrap" id="survey">
+            <h2 class="coffee-tweak2-main__survey-title" v-cloak> {{ title }}</h2>
+            <div class="coffee-tweak2-main__survey">
+                <div v-if="step === 1" class="coffee-tweak2-main__survey-step coffee-tweak2-main__survey-step-1">
+                    <h3>Do you or anyone you know work for a diet pill company?</h3>
+                    <div class="coffee-tweak2-main__survey-question">
+                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
+                            YES
+                        </div>
+                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
+                            NO
+                        </div>
+                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
+                            Someone I know Does
+                        </div>
+                    </div>
+                </div>
+                <div v-if="step === 2" class="coffee-tweak2-main__survey-step coffee-tweak2-main__survey-step-2">
+                    <h3>Are you age 30 or over and want to lose extra pounds quickly and safely?</h3>
+                    <div class="coffee-tweak2-main__survey-question">
+                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
+                            YES
+                        </div>
+                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
+                            NO
+                        </div>
+                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
+                            I'm under 30
+                        </div>
+                    </div>
+                </div>
+                <div v-if="step === 3" class="coffee-tweak2-main__survey-step coffee-tweak2-main__survey-step-3">
+                    <h3>Have you been on more than 2 diets in the last 12 months?</h3>
+                    <div class="coffee-tweak2-main__survey-question">
+                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
+                            YES
+                        </div>
+                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
+                            NO
+                        </div>
+                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
+                            Not in a while
+                        </div>
+                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
+                            I have never dieted
+                        </div>
+                    </div>
+                </div>
+
+                <div v-if="step === 4" class="coffee-tweak2-main__survey-step coffee-tweak2-main__survey-step-4">
+                    <h3>Do you believe 'eating less and exercising more' is an EFFECTIVE way to get back into shape?</h3>
+                    <div class="coffee-tweak2-main__survey-question">
+                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
+                            YES
+                        </div>
+                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
+                            NO
+                        </div>
+                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
+                            I'm Not Sure
+                        </div>
+                    </div>
+                </div>
+
+                <div v-if="step === 5" class="coffee-tweak2-main__survey-step coffee-tweak2-main__survey-step-5">
+                    <img class="lazy" data-src="./assets/images/landings/loading.gif" alt="img">
+                    <span>
+                        Checking against our proprietary Smart Match System™. Please wait...
+                    </span>
+                </div>
+
+                <div v-if="step === 6" class="coffee-tweak2-main__survey-step coffee-tweak2-main__survey-step-6">
+                    <h3>Congratulations! Before you watch the presentation where we share our discoveries with you, our lawyers have asked us to require that each person agrees to the following guidelines:</h3>
+                    <div class="coffee-tweak2-main__survey-result">
+                        тут что-то и кнопка
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+
+        
+
+
+    </div>    
+
+
+</section>

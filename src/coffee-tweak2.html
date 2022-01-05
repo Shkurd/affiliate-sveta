@@ -10,25 +10,24 @@
   <link rel="shortcut icon" href="./assets/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <title>Healthy Fit and Happy</title>
-  <meta name="description" content="Healthy Fit and Happy">
-  <meta name="keywords" content="Healthy, Fit, Happy"/>
+  <title>coffee-tweak</title>
+  <meta name="description" content="coffee-tweak | Healthy Fit and Happy">
+  <meta name="keywords" content="Healthy, Fit, Happy, coffee, tweak"/>
 
   <meta property="og:title" content="Healthy Fit and Happy"/>
   <meta property="og:image" content="./assets/images/og/img.jpg"/>
 
-  <meta name="facebook-domain-verification" content="pssmahmklktzlthzc19wjuj1i8jeuu" />
+  <%= require('html-loader!./assets/components/general/fb-pixel.html') %> <!-- require fb-pixel -->
   
 </head>
 
 <body>
 
-  <%= require('html-loader!./assets/components/general/header.html') %> <!-- require header -->
+  <!-- <%= require('html-loader!./assets/components/general/header.html') %> require header -->
 
   <main class="main">
     
-    <%= require('html-loader!./assets/components/general/main-block.html') %> <!-- require main-block -->    
-
+    <%= require('html-loader!./assets/components/landings/coffee-tweak2-main.html') %> <!-- require coffee-tweak02-main -->
   </main>
 
   <%= require('html-loader!./assets/components/general/footer.html') %> <!-- require footer -->

@@ -39,7 +39,8 @@ module.exports = {
     'article01': ['@babel/polyfill', './assets/js/article01.js'],
     'article02': ['@babel/polyfill', './assets/js/article02.js'],
     'article03': ['@babel/polyfill', './assets/js/article03.js'],
-    'coffee-tweak1': ['@babel/polyfill', './assets/js/coffee-tweak1.js']
+    'coffee-tweak1': ['@babel/polyfill', './assets/js/coffee-tweak1.js'],
+    'coffee-tweak2': ['@babel/polyfill', './assets/js/coffee-tweak2.js']
     
   },
 
@@ -116,7 +117,15 @@ module.exports = {
       },
       chunks: ['coffee-tweak1']
     }),
-
+    new HTMLWebpackPlugin({
+      filename: 'coffee-tweak2.html',
+      template: 'coffee-tweak2.html',
+      minify: {
+        removeComments: isProd,
+        collapseWhitespace: isProd
+      },
+      chunks: ['coffee-tweak2']
+    }),
 
     new CopyPlugin([
       {
