@@ -237,8 +237,11 @@
         }
 
         &-result {
-            padding-top: 10px;
-            padding-bottom: 15px;
+            
+            p {
+                padding-top: 10px;
+                padding-bottom: 15px;
+            }
         }
     }
 

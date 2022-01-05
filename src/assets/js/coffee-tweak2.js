@@ -28,7 +28,7 @@ var app = new Vue({
                 setTimeout(() => {
                     this.step = 6;
                     this.title = `YOUR RESULT`;
-                }, 3500);
+                }, 2500);
             }
         },
     }
