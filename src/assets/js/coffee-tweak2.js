@@ -28,10 +28,10 @@ var app = new Vue({
                 this.step = 5;
                 this.title = `processing responses`;
                 
-                setTimeout(async() => {
+                setTimeout(() => {
                     this.step = 6;
                     this.title = `YOUR RESULT`;
-                    await this.surveyTrackerUTM();
+                    this.surveyTrackerUTM();
                 }, 2500);
                 
             }
