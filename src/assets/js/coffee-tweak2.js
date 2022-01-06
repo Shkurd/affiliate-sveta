@@ -14,10 +14,9 @@ var app = new Vue({
         affilateLink: "https://www.onliner.by/"
     },
 
-    mounted(){
-        let buttonLink = document.querySelector('#buyButton');
-        console.log(buttonLink)
-    },
+    // mounted(){
+
+    // },
 
     methods: {
 
@@ -25,7 +24,6 @@ var app = new Vue({
             if (this.step < 4) {
                 this.step = this.step + 1;
                 this.title = `QUESTION ${this.step}:`;
-                console.log(this.step)
             } else {
                 this.step = 5;
                 this.title = `processing responses`;
