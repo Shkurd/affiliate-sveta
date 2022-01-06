@@ -10,10 +10,14 @@ var app = new Vue({
     el: '#survey',
     data: {
         step: 1,
-        title: "QUESTION 1:"
+        title: "QUESTION 1:",
+        affilateLink: "https://www.onliner.by/"
     },
 
-    // mounted(){}
+    mounted(){
+        let buttonLink = document.querySelector('#buyButton');
+        console.log(buttonLink)
+    },
 
     methods: {
 
@@ -25,12 +29,25 @@ var app = new Vue({
             } else {
                 this.step = 5;
                 this.title = `processing responses`;
-                setTimeout(() => {
+                
+                setTimeout(async() => {
                     this.step = 6;
                     this.title = `YOUR RESULT`;
+                    await this.surveyTrackerUTM();
                 }, 2500);
+                
             }
         },
+
+        surveyTrackerUTM: function () {
+
+            let params = new URLSearchParams(document.location.search);
+            let UTMCampaign = params.get('utm_campaign');
+
+            if(UTMCampaign) {
+                this.affilateLink = this.affilateLink + (this.affilateLink.match(/\?/) ? '&' : '?') + 'tid' + '=' + UTMCampaign;
+            };
+        }
     }
 
   })

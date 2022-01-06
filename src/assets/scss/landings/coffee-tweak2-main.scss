@@ -245,6 +245,15 @@
         }
     }
 
+    &__nosurvey {
+        padding-top: 60px;
+
+        p {
+            text-align: center;
+            font-weight: 500;
+        }
+    }
+
     &__buy {
         padding-top: 30px;
         padding-bottom: 30px;
