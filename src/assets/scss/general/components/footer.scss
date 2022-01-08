@@ -20,11 +20,16 @@
 			}
 		}
 
-		&-policy {
+		&-links {
 			text-align: left;
 
 			@media screen and (max-width: $max-tablet-width) {
 				text-align: center;
+			}
+
+			a {
+				padding-bottom: 2px;
+				display: inline-block;
 			}
 		}
 

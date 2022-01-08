@@ -27,7 +27,6 @@ const jsLoaders = () => {
   return loaders
 }
 
-
 module.exports = {
 
   context: path.resolve(__dirname, 'src'),
@@ -40,8 +39,8 @@ module.exports = {
     'article02': ['@babel/polyfill', './assets/js/article02.js'],
     'article03': ['@babel/polyfill', './assets/js/article03.js'],
     'coffee-tweak1': ['@babel/polyfill', './assets/js/coffee-tweak1.js'],
-    'coffee-tweak2': ['@babel/polyfill', './assets/js/coffee-tweak2.js']
-    
+    'coffee-tweak2': ['@babel/polyfill', './assets/js/coffee-tweak2.js'],
+    'contacts': ['@babel/polyfill', './assets/js/contacts.js'],
   },
 
   output: {
@@ -125,6 +124,15 @@ module.exports = {
         collapseWhitespace: isProd
       },
       chunks: ['coffee-tweak2']
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'contacts.html',
+      template: 'contacts.html',
+      minify: {
+        removeComments: isProd,
+        collapseWhitespace: isProd
+      },
+      chunks: ['contacts']
     }),
 
     new CopyPlugin([
