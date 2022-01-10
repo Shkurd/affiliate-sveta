@@ -11,7 +11,7 @@ var app = new Vue({
     data: {
         step: 1,
         title: "QUESTION 1:",
-        affilateLink: "https://www.onliner.by/"
+        affilateLink: "https://hop.clickbank.net/?vendor=javaburn&affiliate=lanabel&lid=3"
     },
 
     // mounted(){
