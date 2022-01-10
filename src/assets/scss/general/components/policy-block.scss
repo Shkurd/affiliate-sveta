@@ -10,12 +10,12 @@
         padding-bottom: 70px;
 
         @media screen and (max-width: $max-tablet-width) {
-            padding-top: 60px;
+            padding-top: 50px;
             padding-bottom: 60px;
         }
 
         @media screen and (max-width: $max-mobile-width) {
-            padding-top: 30px;
+            padding-top: 20px;
             padding-bottom: 50px;
         }
     }
