@@ -1,0 +1,38 @@
+
+.terms-and-conditions {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70%, 50%;
+
+    &__container {
+        padding-top: 80px;
+        padding-bottom: 70px;
+
+        @media screen and (max-width: $max-tablet-width) {
+            padding-top: 50px;
+            padding-bottom: 60px;
+        }
+
+        @media screen and (max-width: $max-mobile-width) {
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
+    }
+
+    h1 {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        max-width: 100%;
+    }
+
+    h2 {
+        padding-top: 35px;
+        padding-bottom: 10px;
+    }
+
+    a {
+        color: #2a54c9;
+    }
+
+}

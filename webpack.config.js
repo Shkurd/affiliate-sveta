@@ -41,6 +41,7 @@ module.exports = {
     'coffee-tweak1': ['@babel/polyfill', './assets/js/coffee-tweak1.js'],
     'coffee-tweak2': ['@babel/polyfill', './assets/js/coffee-tweak2.js'],
     'contacts': ['@babel/polyfill', './assets/js/contacts.js'],
+    'terms-and-conditions': ['@babel/polyfill', './assets/js/terms-and-conditions.js'],
   },
 
   output: {
@@ -133,6 +134,15 @@ module.exports = {
         collapseWhitespace: isProd
       },
       chunks: ['contacts']
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'terms-and-conditions.html',
+      template: 'terms-and-conditions.html',
+      minify: {
+        removeComments: isProd,
+        collapseWhitespace: isProd
+      },
+      chunks: ['terms-and-conditions']
     }),
 
     new CopyPlugin([
