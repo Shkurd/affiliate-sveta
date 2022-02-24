@@ -4,83 +4,97 @@
 
         <div class="coffee-tweak2-main__info-wrap">
             <h1 class="coffee-tweak2-main__title coffee-tweak2-main__title-mobile">
-                Most Americans Have No Idea That This Simple "10-second Routine" Exists... And Can Change Lives
+                9 out of 10 Women Are Unaware That This Simple "10-second Coffee Shortcut" Exists... And Can Change Lives
             </h1>
             <div class="coffee-tweak2-main__info-img">
-                <img class="lazy" data-src="./assets/images/landings/35413728.jpg" alt="img">
+                <img class="lazy" data-src="./assets/images/landings/354137288.jpg" alt="img">
             </div>
             <div class="coffee-tweak2-main__info">
                 <h1 class="coffee-tweak2-main__title coffee-tweak2-main__title-pc">
-                    Most Americans Have No Idea That This Simple "10-second Routine" Exists... And Can Change Lives
+                    9 out of 10 Women Are Unaware That This Simple "10-second Coffee Shortcut" Exists... And Can Change Lives
                 </h1>
                 <p class="coffee-tweak2-main__info-text">
-                    This simple 10-second morning coffee routine. I used to feel like a burden to my family.. But now, not only have I kept my blood sugar in check.. I also feel full of energy and can eat whatever I want, including cakes and pizza! - Ellen from Massachusetts (63 yrs old)
+                    “At 58, I wear smaller jeans, I sleep better, and I have more energy than I ever did in my thirties.
+                    I can’t believe that after years of trying and failing, all I had to do was make a simple little change to my morning coffee.” - Ellen from Massachusetts 
                 </p>
                 <p class="coffee-tweak2-main__info-text">
-                    I can't say it'll work the same for you, but you can take this short quiz and find out more about this method!
+                    It may not work exactly the same for everyone, but you can take this quiz to learn more about the method!
                 </p>
             </div>
         </div>
+
+        <div class="coffee-tweak2-main__nosurvey">
+            <p>
+                If you don't like surveys, click the button below...
+            </p>
+            <div class="coffee-tweak2-main__buy">
+                <a class="coffee-tweak2-main__buy-button link" data-link="true" href="https://hop.clickbank.net/?vendor=javaburn&affiliate=lanabel&lid=3">Skip survey and watch video</a>
+            </div>
+        </div>
+
         <div class="coffee-tweak2-main__survey-wrap" id="survey">
             <h2 class="coffee-tweak2-main__survey-title" v-cloak> {{ title }}</h2>
             <div class="coffee-tweak2-main__survey">
                 <div v-if="step === 1" class="coffee-tweak2-main__survey-step coffee-tweak2-main__survey-step-1">
-                    <h3>Do you or anyone you know work for a diet pill company?</h3>
+                    <h3>Do You Drink Coffee daily?</h3>
                     <div class="coffee-tweak2-main__survey-question">
                         <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
-                            YES
+                            Yes 1-2 cups
                         </div>
                         <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
-                            NO
+                            Yes 3-4 cups
                         </div>
                         <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
-                            Someone I know Does
+                            Yes 4+ cups
+                        </div>
+                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
+                            No
                         </div>
                     </div>
                 </div>
                 <div v-if="step === 2" class="coffee-tweak2-main__survey-step coffee-tweak2-main__survey-step-2">
-                    <h3>Are you age 30 or over and want to lose extra pounds quickly and safely?</h3>
+                    <h3>Do You Currently Do Any Form of Exercise?</h3>
                     <div class="coffee-tweak2-main__survey-question">
                         <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
-                            YES
+                            Does Walking To My Car Count?
                         </div>
                         <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
-                            NO
+                            1-2x Weekly
                         </div>
                         <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
-                            I'm under 30
+                            3-4x Weekly
+                        </div>
+                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
+                            YES! 6x Weekly 
                         </div>
                     </div>
                 </div>
                 <div v-if="step === 3" class="coffee-tweak2-main__survey-step coffee-tweak2-main__survey-step-3">
-                    <h3>Have you been on more than 2 diets in the last 12 months?</h3>
+                    <h3>Have you been on more than 1 diet in the last 2 years? </h3>
                     <div class="coffee-tweak2-main__survey-question">
                         <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
-                            YES
+                            Yes
                         </div>
                         <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
-                            NO
+                            No
                         </div>
                         <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
-                            Not in a while
+                            I was but long ago
                         </div>
                         <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
-                            I have never dieted
+                            I have never tried any diet
                         </div>
                     </div>
                 </div>
 
                 <div v-if="step === 4" class="coffee-tweak2-main__survey-step coffee-tweak2-main__survey-step-4">
-                    <h3>Do you believe 'eating less and exercising more' is an EFFECTIVE way to get back into shape?</h3>
+                    <h3>Are you over 40 and want to shed some pounds safely?</h3>
                     <div class="coffee-tweak2-main__survey-question">
                         <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
-                            YES
+                            Yes
                         </div>
                         <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
-                            NO
-                        </div>
-                        <div class="coffee-tweak2-main__survey-question-item" v-on:click="stepChange">
-                            I'm Not Sure
+                            No 
                         </div>
                     </div>
                 </div>
@@ -96,16 +110,16 @@
                     <h3>Congratulations! Before you watch the presentation where we share our discoveries with you, our lawyers have asked us to require that each person agrees to the following guidelines:</h3>
                     <div class="coffee-tweak2-main__survey-result">
                         <p>
-                            ✔️ Do NOT use our tip to lose too much weight, too fast. This powerful secret can help average people over 50 to quickly shed pounds and must be used responsibly.
+                            ✔️ It is NOT recommended to use our tip to lose too much weight, too quickly. It can help individuals over 50 shed pounds, but it must be used responsibly.
                         </p>
                         <p>
-                            ✔️ This presentation is ONLY being made available to a select group of people If you do not want to discover these secrets, please CLOSE THIS WINDOW IMMEDIATELY to free up your slot for the next person in line.
+                            ✔️ We are making this presentation available ONLY to a very limited group of people. If you do not wish to learn these secrets CLOSE THIS WINDOW IMMEDIATELY to allow the next person to take your place.
                         </p>
                         <p>
-                            ✔️ This presentation will ONLY be available as a trial for the next few months and maybe REMOVED in the near future if the Demand (which has been extremely high) becomes too overwhelming to fulfill with 100% satisfaction.
+                            ✔️ This presentation will only be offered as a trial for the next few months, and might be removed in the near future if the Demand (which has been extremely high) becomes too overwhelming to fulfill with 100% satisfaction.
                         </p>
                         <p>
-                            If you agree to all the above, click the "I Agree" button below to proceed to the following private presentation.
+                            Click the "I Agree" button to proceed to the following private presentation if you agree to all of the above
                         </p>
                         <div class="coffee-tweak2-main__buy">
                             <a class="coffee-tweak2-main__buy-button link" v-bind:href="affilateLink">I AGREE TO WATCH!</a>
@@ -115,20 +129,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="coffee-tweak2-main__nosurvey">
-            <p>
-                If you don't like surveys, click the button below...
-            </p>
-            <div class="coffee-tweak2-main__buy">
-                <a class="coffee-tweak2-main__buy-button link" data-link="true" href="https://hop.clickbank.net/?vendor=javaburn&affiliate=lanabel&lid=3">Skip survey and watch video</a>
-            </div>
-        </div>
-
-       
-
-        
-
 
     </div>    
 
